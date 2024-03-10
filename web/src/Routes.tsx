@@ -16,7 +16,7 @@ import BlogLayout from './layouts/BlogLayout/BlogLayout'
 const Routes = () => {
   return (
     <Router>
-      <Set wrap={ScaffoldLayout} title="Posts" titleTo="posts" buttonLabel="New Post" buttonTo="newPost">
+      <Set wrap={ScaffoldLayout} title="Posts" titleTo="posts" buttonLabel="Create New Post" buttonTo="newPost">
         <Route path="/posts/new" page={PostNewPostPage} name="newPost" />
         <Route path="/posts/{id:Int}/edit" page={PostEditPostPage} name="editPost" />
         <Route path="/posts/{id:Int}" page={PostPostPage} name="post" />
@@ -26,6 +26,7 @@ const Routes = () => {
         <Route path="/" page={HomePage} name="home" />
         <Route path="/contact" page={ContactPage} name="contact" />
         <Route path="/about" page={AboutPage} name="about" />
+        <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
       </Set>
       <Route notfound page={NotFoundPage} />
     </Router>
